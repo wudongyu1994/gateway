@@ -1,22 +1,10 @@
 #include "common.h"
+/************************************************
+逻辑摘要
+    0.外部仅仅需要调用 ESP8266_init() 即可完成初始化，然后调用 ESP8266_send_http_data(Product_Id,Product_Location) 即可发送数据。
+	1.
 
-
-//连接端口号:8086,可自行修改为其他端口.
-const u8* portnum="8086";		 
-
-//WIFI STA模式,设置要去连接的路由器无线参数,请根据你自己的路由器设置,自行修改.
-const u8* wifista_ssid="ALIENTEK";			//路由器SSID号
-const u8* wifista_encryption="wpawpa2_aes";	//wpa/wpa2 aes加密方式
-const u8* wifista_password="15902020353"; 	//连接密码
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////// 
-//4个网络模式
-const u8 *ATK_ESP8266_CWMODE_TBL[3]={"STA模式 ","AP模式 ","AP&STA模式 "};	//ATK-ESP8266,3种网络模式,默认为路由器(ROUTER)模式 
-//4种工作模式
-const u8 *ATK_ESP8266_WORKMODE_TBL[3]={"TCP服务器","TCP客户端"," UDP 模式"};	//ATK-ESP8266,4种工作模式
-//5种加密方式
-const u8 *ATK_ESP8266_ECN_TBL[5]={"OPEN","WEP","WPA_PSK","WPA2_PSK","WPA_WAP2_PSK"};
-/////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+************************************************/
 
 /*智能仓储用户配置参数，用于ESP8266向指定的网络端口发送数据所需要的参数*/
 char *WIFI_SSID="wdy-6s";//要连接的WIFI的ID号
